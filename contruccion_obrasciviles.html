@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes de proyectos Ingeniería y Alturas S.A.S</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+  background: linear-gradient(
+    135deg, /* Ángulo de la división diagonal */
+    var(--primary-color) 50%, /* Primer color ocupa la mitad */
+    var(--secondary-color) 50% /* Segundo color comienza desde la mitad */
+  );
+  color: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos para el logo y título */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre el logo y el texto */
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px; /* Tamaño del texto */
+  font-weight: 30; /* Grosor del texto */
+  color: var(--white); /* Color blanco */
+}
+
+.coco {
+  width: 90px; /* Ajusta el tamaño del logo */
+  height: auto;
+  border-radius: 5px; /* Opcional: Bordes redondeados */
+}
+
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .service-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            max-width: 500px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="coco" src="imagenes - copia/nike.png" alt="Logo de la empresa">
+        </div>
+        <div class="logo">INGENIERIA Y ALTURAS S.A.S</div>
+        <nav>
+            <ul>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Nuestros Servicios</h2>
+        <div class="service-boxes">
+            <div class="service-box">
+                <img src="https://via.placeholder.com/400x300" alt="Servicio 1">
+                <h3>Servicio 1</h3>
+                <p>Descripción breve del primer servicio ofrecido.</p>
+            </div>
+            <div class="service-box">
+                <img src="https://via.placeholder.com/400x300" alt="Servicio 2">
+                <h3>Servicio 2</h3>
+                <p>Descripción breve del segundo servicio ofrecido.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 INGENIERIA Y ALTURAS S.A.S . Todos los derechos reservados [ A-G COMPANY ].</p>
+    </footer>
+</body>
+</html>

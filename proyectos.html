@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos -  Ingeniería y Alturas S.A.S  </title>
+    <style>
+      /* Variables globales para colores */
+      :root {
+        --primary-color: #0056b3;
+        --secondary-color: #007bff;
+        --text-color: #333;
+        --background-light: #f9f9f9;
+        --background-dark: #1a1a1a;
+        --white: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --transition: 0.3s ease;
+      }
+
+      /* Configuración general */
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        background-color: var(--background-light);
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      header {
+  background: linear-gradient(
+    135deg, /* Ángulo de la división diagonal */
+    var(--primary-color) 50%, /* Primer color ocupa la mitad */
+    var(--secondary-color) 50% /* Segundo color comienza desde la mitad */
+  );
+  color: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px; /* Altura fija para consistencia */
+}
+
+/* Estilos para el logo y título */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre el logo y el texto */
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px; /* Tamaño del texto */
+  font-weight: 600; /* Grosor del texto corregido */
+  color: var(--white); /* Color blanco */
+}
+
+.coco {
+  width: 70px; /* Tamaño optimizado para el logo */
+  height: auto;
+  border-radius: 5px; /* Opcional: Bordes redondeados */
+}
+
+/* Estilos para la navegación */
+nav {
+  flex: 1; /* Permite que los elementos se distribuyan proporcionalmente */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* Elementos de la barra alineados a la derecha */
+  gap: 15px; /* Espaciado entre enlaces */
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background var(--transition);
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Efecto hover más visible */
+}
+
+/* Para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Alinea verticalmente los elementos */
+    height: auto;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background var(--transition);
+      }
+
+      nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("https://via.placeholder.com/1920x600?text=Hero+Image")
+          no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        text-align: center;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 48px;
+        margin: 0;
+        z-index: 1;
+      }
+
+      .hero p {
+        font-size: 18px;
+        z-index: 1;
+      }
+
+      .cta-button {
+        background: var(--secondary-color);
+        color: var(--white);
+        text-decoration: none;
+        padding: 12px 24px;
+        margin-top: 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: transform var(--transition), background var(--transition);
+        z-index: 1;
+      }
+
+      .cta-button:hover {
+        background: var(--primary-color);
+        transform: scale(1.1);
+      }
+
+      /* Secciones */
+      section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto 20px;
+        max-width: 800px;
+      }
+
+      /* Servicios */
+      .service-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .service {
+        background: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--shadow-color);
+        flex: 1 1 calc(33.333% - 20px);
+        transition: transform var(--transition);
+      }
+
+      .service:hover {
+        transform: translateY(-10px);
+      }
+
+      .service h3 {
+        font-size: 20px;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+      }
+
+      /* Estilo para los enlaces de "Ver imágenes" */
+      .image-link {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color var(--transition);
+      }
+
+      .image-link:hover {
+        color: var(--primary-color);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Botón flotante "Volver Arriba" */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #007bff;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+        transition: background 0.3s ease;
+      }
+
+      .back-to-top:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <img
+                class="coco" 
+                src="imagenes - copia/nike.png"
+                alt="Logo de la empresa"
+            />
+            <span class="logo-text">INGENIERIA Y ALTURAS S.A.S</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="proyecto3.html">Inicio </a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+      
+        <h2>Proyectos Destacados</h2>
+        <p>
+          Hemos trabajado en una variedad de proyectos que abarcan desde puentes
+          y carreteras hasta edificios de oficinas y viviendas. Nuestra misión
+          es garantizar calidad y sostenibilidad en cada proyecto que
+          realizamos.
+        </p>
+      
+      <br /><br /><br />
+      <div>
+        <div class="service">
+          <h3>INSTALACIÓN Y CERTIFICACIÓN DE PUNTOS DE ANCLAJE.</h3>
+          <p>
+            La instalación y certificación de puntos de anclaje es un proceso
+            crítico para garantizar la seguridad en trabajos en altura, donde
+            el riesgo de caídas es significativo.
+          </p>
+          <a href="img_pro_anclajes.html" class="image-link">Ver imágenes.</a>
+        </div>
+        <br /><br /><br />
+        <div class="service">
+          <h3>INSTALACIÓN Y CERTIFICACIÓN DE LÍNEAS DE VIDA HORIZONTALES.</h3>
+          <p>
+            La instalación y certificación de líneas de vida horizontales es
+            fundamental para la seguridad en trabajos en altura.
+          </p>
+          <a href="imag_proy_lineas_vida_hor.html" class="image-link">Ver imágenes.</a>
+        </div>
+        <br /><br /><br />
+        <div class="service">
+          <h3>INSTALACIÓN Y CERTIFICACIÓN DE LÍNEAS DE VIDA VERTICALES.</h3>
+          <p>
+            La certificación garantiza que el sistema cumple con normativas y
+            estándares de seguridad, asegurando su funcionalidad.
+          </p>
+          <a href="imag_proy_lineas_vida_ver.html" class="image-link">Ver imágenes.</a>
+        </div>
+        <br /><br /><br />
+        <div class="service">
+          <h3>CONSTRUCCIÓN DE OBRAS CIVILES.</h3>
+          <p>
+            La construcción de obras civiles abarca el diseño, planificación y
+            ejecución de proyectos de infraestructura, como edificios,
+            carreteras y puentes.
+          </p>
+          <a href="contruccion_obrasciviles.html" class="image-link">Ver imágenes.</a>
+        </div>
+        <br><br><br>
+        <div class="service">
+            <h3>CONSTRUCCIÓN DE OBRAS CIVILES PAVIMENTOS FLEXIBLES – PINTURA VIAL HORIZONTAL.</h3>
+            <p>
+              La construcción de obras civiles abarca el diseño, planificación y
+              ejecución de proyectos de infraestructura, como edificios,
+              carreteras y puentes.
+            </p>
+            <a href="constr_o_c_f_pinturahori.html" class="image-link">Ver imágenes.</a>
+          </div>
+          <br><br><br>
+          <div class="service">
+              <h3>CONSTRUCCIÓN DE OBRAS CIVILES  PAVIMENTOS FLEXIBLES Y OBRAS COMPLEMENTARIAS.</h3>
+              <p>
+                La construcción de obras civiles abarca el diseño, planificación y
+                ejecución de proyectos de infraestructura, como edificios,
+                carreteras y puentes.
+              </p>
+              <a href="constr_o_c_f_complementa.html" class="image-link">Ver imágenes.</a>
+            </div>
+            <br><br><br>
+            <div class="service">
+                <h3>CONSTRUCCIÓN DE OBRAS CIVILES  PAVIMENTOS FLEXIBLES – MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE PAVIMENTOS.</h3>
+                <p>
+                  La construcción de obras civiles abarca el diseño, planificación y
+                  ejecución de proyectos de infraestructura, como edificios,
+                  carreteras y puentes.
+                </p>
+                <a href="constr_o_c_f_manteminientoprev.html" class="image-link">Ver imágenes.</a>
+              </div>
+              <br><br><br>
+              <div class="service">
+                  <h3>CONSTRUCCIÓN DE OBRAS CIVILES EN OBRAS DE URBANISMO .</h3>
+                  <p>
+                    La construcción de obras civiles abarca el diseño, planificación y
+                    ejecución de proyectos de infraestructura, como edificios,
+                    carreteras y puentes.
+                  </p>
+                  <a href="constr_o_c_urbanismo.html" class="image-link">Ver imágenes.</a>
+                </div>
+                <br><br><br>
+                <div class="service">
+                    <h3>CONSTRUCCIÓN DE OBRAS CIVILES EN ESTRUCTURAS EN CONCRETO.</h3>
+                    <p>
+                      La construcción de obras civiles abarca el diseño, planificación y
+                      ejecución de proyectos de infraestructura, como edificios,
+                      carreteras y puentes.
+                    </p>
+                    <a href="constr_o_c_concreto.html" class="image-link">Ver imágenes.</a>
+                  </div>
+                  <br><br><br>
+                  <div class="service">
+                      <h3>CONSTRUCCIÓN DE OBRAS CIVILES SISTEMAS DE IMPERMEABILIZACIÓN Y CONSTRUCCIÓN DE PAVIMENTOS ARTICULADOS.</h3>
+                      <p>
+                        La construcción de obras civiles abarca el diseño, planificación y
+                        ejecución de proyectos de infraestructura, como edificios,
+                        carreteras y puentes.
+                      </p>
+                      <a href="constr_o_c_impermeabili.html" class="image-link">Ver imágenes.</a>
+                    </div>
+      </div>
+    </section>
+    <br><br><br>
+    <footer>
+      <p>
+        &copy; 2024 INGENIERIA Y ALTURAS S.A.S . Todos los derechos reservados [ A-G COMPANY ].
+      </p>
+    </footer>
+    <button class="back-to-top" id="backToTop">↑ Volver Arriba</button>
+
+    <script>
+      const backToTopButton = document.getElementById("backToTop");
+
+      window.onscroll = () => {
+        if (window.scrollY > 200) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      backToTopButton.onclick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    </script>
+  </body>
+</html>

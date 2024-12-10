@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingeniería y Alturas S.A.S</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Variables de colores */
+      :root {
+        --primary-color: #0056b3;
+        --secondary-color: #007bff;
+        --text-color: #333;
+        --background-light: #f9f9f9;
+        --white: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.1); 
+        --transition: 0.3s ease;
+      }
+
+      /* Estilos generales */
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        background-color: var(--background-light);
+        scroll-behavior: smooth;
+      }
+
+      /* Header */
+      header {
+  background: linear-gradient(
+    135deg, /* Ángulo de la división diagonal */
+    var(--primary-color) 50%, /* Primer color ocupa la mitad */
+    var(--secondary-color) 50% /* Segundo color comienza desde la mitad */
+  );
+  color: var(--white);
+  padding: 15px 20px; /* Espaciado interno consistente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px; /* Altura fija */
+}
+
+/* Estilos para el logo y título */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre logo y texto */
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px; /* Tamaño del texto */
+  font-weight: 600; /* Grosor del texto */
+  color: var(--white); /* Color blanco */
+}
+
+.coco {
+  width: 70px; /* Tamaño del logo */
+  height: auto;
+  border-radius: 5px; /* Opcional: Bordes redondeados */
+}
+
+/* Estilos para la navegación */
+nav {
+  flex: 1; /* Distribución proporcional */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end; /* Elementos alineados a la derecha */
+  gap: 15px; /* Espaciado entre enlaces */
+}
+
+nav ul li {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background var(--transition);
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Efecto hover */
+}
+
+/* Para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Alineación vertical */
+    height: auto;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+
+  nav ul {
+    justify-content: center; /* Elementos centrados */
+  }
+}
+
+
+
+      
+
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      header nav ul li {
+        margin-left: 20px;
+      }
+
+      header nav ul li a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background var(--transition);
+      }
+
+      header nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        color: var(--white);
+        padding: 150px 20px;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0 0 10px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .cta-button {
+        background: var(--secondary-color);
+        color: var(--white);
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background var(--transition), transform var(--transition);
+      }
+
+      .cta-button:hover {
+        background: var(--primary-color);
+        transform: scale(1.1);
+      }
+
+      /* Servicios */
+      #services {
+        padding: 60px 20px;
+        background: var(--background-light);
+        text-align: center;
+        transition: background var(--transition), transform var(--transition);
+      }
+
+      .service-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      
+
+      .service h3 {
+        font-size: 20px;
+        color: var(--primary-color);
+      }
+
+      .service p {
+        font-size: 16px;
+      }
+
+      /* Valores */
+      #values {
+        padding: 60px 20px;
+        text-align: center;
+        background: var(--background-light);
+      }
+
+      .values-container {
+        margin-top: 20px;
+        display: grid;
+        gap: 10px;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .values-container p {
+        background: var(--white);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--shadow-color);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-color);
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+      }
+
+      .sam{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <img
+                class="coco" 
+                src="imagenes - copia/nike.png"
+                alt="Logo de la empresa"
+            />
+            <span class="logo-text">INGENIERIA Y ALTURAS S.A.S</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="proyecto3.html">Inicio </a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" style="background: url('imagenes - copia/civil_engineering_art.png') no-repeat center center/cover;">
+        <h1>La ingeniería civil no solo construye, construye el progreso</h1>
+        <p>Soluciones innovadoras en ingeniería civil para un mundo mejor.</p>
+      </section>
+      
+
+    <section id="services">
+      <h2>Un Poco De Nuestros Servicios</h2>
+      <div class="service-container">
+        <div class="service">
+          <h3>Construcción</h3>
+          <p>Diseño y construcción de infraestructura de alta calidad.</p>
+        </div>
+        <div class="service">
+          <h3>Consultoría</h3>
+          <p>Asesoramiento técnico especializado en ingeniería civil.</p>
+        </div>
+        <div class="service">
+          <h3>Mantenimiento</h3>
+          <p>Servicios de mantenimiento para proyectos de construcción.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="values">
+      <h2>Nuestros Valores</h2>
+      <div class="values-container">
+        <p>Compromiso: Trabajamos para superar las expectativas de nuestros clientes.</p>
+        <p>Innovación: Incorporamos las últimas tecnologías para optimizar procesos.</p>
+        <p>Sostenibilidad: Diseñamos con conciencia ecológica, promoviendo un futuro más limpio.</p>
+      </div>
+    </section>
+
+    <section class="sam">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>Déjanos ayudarte a hacerlo realidad. Contáctanos ahora.</p>
+      <a href="contacto.html" class="cta-button">Contáctanos</a>
+    </section>
+<br><br><br>            
+    <footer>
+      <p>
+        &copy; 2024 INGENIERIA Y ALTURAS S.A.S Todos los derechos reservados  [A-G COMPANY].
+      </p>
+    </footer>
+  </body>
+</html>
